@@ -19,4 +19,7 @@ class Role < ApplicationRecord
 
   has_many :role_menus, dependent: :destroy
   has_many :menus, through: :role_menus
+
+  validates :code, uniqueness: true, presence: true
+  validates :name, presence: true
 end

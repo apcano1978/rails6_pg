@@ -2,8 +2,6 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 
-Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
-
 require File.expand_path('../config/environment', __dir__)
 
 # Prevent database truncation if the environment is production

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_08_084251) do
+ActiveRecord::Schema.define(version: 2019_11_08_094153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_11_08_084251) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["code"], name: "index_menu_elements_on_code", unique: true
   end
 
   create_table "menu_menu_elements", force: :cascade do |t|
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_11_08_084251) do
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["code"], name: "index_menus_on_code", unique: true
   end
 
   create_table "permissions", force: :cascade do |t|
@@ -46,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_11_08_084251) do
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["code"], name: "index_permissions_on_code", unique: true
   end
 
   create_table "role_menus", force: :cascade do |t|
@@ -72,6 +75,7 @@ ActiveRecord::Schema.define(version: 2019_11_08_084251) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["code"], name: "index_roles_on_code", unique: true
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -80,6 +84,7 @@ ActiveRecord::Schema.define(version: 2019_11_08_084251) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["token"], name: "index_sessions_on_token", unique: true
     t.index ["user_id"], name: "index_sessions_on_user_id"
   end
 
