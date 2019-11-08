@@ -32,6 +32,13 @@ This repo is the standard boylerplate we are using to start a Rails 6 project wi
 
 ## Built in functionality
 
+* Annotate Models
+Gem annotate is already installed and some basic models come already annotated, remember run:
+
+`annotate --exclude tests,fixtures,factories,serializers`
+
+in your terminal if you want to annotate new migrations you perform in model files
+
 ## Git Ignore configured to exclude:
    #### database.yml
    #### secrets.yml
