@@ -8,7 +8,7 @@ This repo is the standard boylerplate we are using to start a Rails 6 project wi
 
 * Rails version: 6.0.1
 
-* Database Adapter: Mysql2
+* Database Adapter: Postgresql
 
 * Test suite: RSpec, Capybara, Shoulda & Factory Bot
 
@@ -25,8 +25,21 @@ This repo is the standard boylerplate we are using to start a Rails 6 project wi
 
 ## Models and migrations for:
   * User - User Model to handle application users
+    - Relations: Role: n-n, Session: 1-n
+  * Session
+    - Relations: User: 1-n
+  * Role
+    - Relations: User: n-n, Permission: n-n, Menu: n-n
+  * Permission
+    - Relations: Role: n-n
+  * Menu
+    - Relations: Role: n-n, MenuElement: n-n
+  * MenuElement
+    - Relations: Menu: n-n
 
 ## Services (job queues, cache servers, search engines, etc.)
+
+## Built-in tests
 
 ## Deployment instructions
 
