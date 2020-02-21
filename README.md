@@ -23,6 +23,7 @@ This repo is the standard boylerplate we are using to start a Rails 6 project wi
 1. Clone this repo into your local machine
 2. Create `database.yml` file and set it according to your local environment with a postgres database
 3. Run `bundle install` in project folder
+4. Run `yarn install` in project folder
 4. Execute `Rails db:create && Rails db:migrate` 
 5. Run `rails s` and go to `http://localhost:3000` in your browser
 
